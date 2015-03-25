@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+    </head>
+    <body>
+        <!DOCTYPE html>
+<html>
+<head>
+<style>
+#section {
+    background-color: black;
+    color:white;
+    width: float;
+    padding: 25px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border: 25px solid black;
+    margin: 0;
+}
+.button, a.button, #footer a.button, #searchsubmit, input[type="submit"] {
+border: solid;
+border-radius: 0px;
+border-width: 5px;
+background: none;
+}
+
+.button:hover{
+border-radius: 0px;
+border-width: 5px;
+border-color: #000;
+background: #f40064;
+opacity: 1;
+
+.button:label{
+color:#000;
+}
+}
+
+</style>
+<script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Now safe to use device APIs
+        if(PushbotsPlugin.isiOS){
+          PushbotsPlugin.initializeiOS("550ae6241d0ab12a7f8b4573");
+        }
+        if(PushbotsPlugin.isAndroid){
+          PushbotsPlugin.initializeAndroid("550ae6241d0ab12a7f8b4573", "116332121444");
+        }
+    }
+
+    </script>
+</head>
+<body onload="onLoad()">
+
+<div id="section" align="center">
+<img src="http://i0.wp.com/thesourcepresentsfinearts.com/wp-content/uploads/2015/03/tSp-Mob2.png?w=100%25" width="277" height="28" title=""><p></p>
+<p><a href="http://thesourcepresentsfinearts.com" target="_blank" style="" class="button ">MY SCHEDULE</a></p>
+<p><a href="http://thesourcepresentsfinearts.com" target="_blank" style="" class="button ">GLOBAL SCHEDULE</a></p>
+<p><a href="http://thesourcepresentsfinearts.com" target="_blank" style="" class="button ">CUSTOM SCHEDULE</a></p>
+<p><a href="http://thesourcepresentsfinearts.com" target="_blank" style="" class="button ">WEBSITE</a></p>
+<p style="font-size:.7em">use <strong>#theSOURCEpresents</strong> on all your social posts!</p>
+</div>
+
+<body onload="onLoad()">
+</html>
+
+
+
+
+    </body>
+</html>
