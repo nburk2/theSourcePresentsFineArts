@@ -72,11 +72,9 @@
 
     function getUserInfo(){
         var userName = window.localStorage.getItem("name");
-        if(userName == null || userName == ""){
-            window.location.href = 'login.html';
+        if(userName != null || userName != ""){
+            document.getElementById("name").value = userName
         }
-        document.getElementById("userName").innerHTML = "Welcome " + userName
-        document.getElementById("personalSchedule").href = "http://thesourcepresentsfinearts.com/event-by-user/" + userName
     }
 
     // device APIs are available
@@ -91,43 +89,31 @@
         }
     }
 
+    function addName(){
+        var name = document.getElementById("name").value;
+        window.localStorage.setItem("name", name);
+
+        window.location.href = 'index.html';
+    }
+
     </script>
 </head>
 <body onload="onLoad()">
-    <style>
-body{
-    background: #000;
-}
-    </style>
+        <style>
+    body{
+        background: #000;
+    }
+        </style>
+    <div id="top" align="center">
+    <img src="http://i0.wp.com/thesourcepresentsfinearts.com/wp-content/uploads/2015/03/tSp-Mob2.png?w=100%25" width="277" height="27" title="">
+    </div>
 
-<div id="section">
-    <div class="right">
-        <a href="login.html"><p id="userName"></p></a>
-        <!-- <button href="login.html" class="button">Change Name</button> -->
-    </div> 
+    <div id="section" align="center">
 
-</div>
-
-
-<div id="top" align="center">
-<img src="http://i0.wp.com/thesourcepresentsfinearts.com/wp-content/uploads/2015/03/tSp-Mob2.png?w=100%25" width="277" height="27" title="">
-</div>
-
-
-<div id="section" align="center">
-    <p>
-        <a onclick="window.open('http://thesourcepresentsfinearts.com', '_blank', 'location=yes', 'closebuttoncaption=Close')" style="" class="button ">MY SCHEDULE</a>
-    </p>
-    <p>
-        <a href="http://thesourcepresentsfinearts.com/events" target="_blank" style="" class="button ">GLOBAL SCHEDULE</a></p>
-    <p>
-        <a href="http://thesourcepresentsfinearts.com" id="personalSchedule" target="_blank" style="" class="button ">CUSTOM SCHEDULE</a>
-    </p>
-    <p>
-        <a href="http://thesourcepresentsfinearts.com/event-by-user/" target="_blank" style="" class="button ">WEBSITE</a>
-    </p>
-    <p style="font-size:.7em">use <strong>#theSOURCEpresents</strong> on all your social posts!</p>
-</div>
-    </body>
+        <p><input placeholder="enter first name" type="text" value="" id="name"/></p>
+        <p><button id="submit" onclick="addName()" class="button">Submit</button></p>
+        <p style="font-size:.7em">use <strong>#theSOURCEpresents</strong> on all your social posts!</p>
+    </div>
+</body>
 
 </html>
